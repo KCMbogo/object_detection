@@ -32,3 +32,4 @@ tqdm==4.67.1
 filterpy==1.4.5
 scikit-image==0.25.2
 lap==0.5.12
+torchaudio==2.6.0

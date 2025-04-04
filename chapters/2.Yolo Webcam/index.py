@@ -1,15 +1,18 @@
 from ultralytics import YOLO
-import cv2
-import cvzone
+import cv2, cvzone, torch
 
-cap = cv2.VideoCapture(0)
-# cap.set(propId, value)
-cap.set(3, 1280)
-cap.set(4, 720)
+# Device agnostic code
+device = "cuda" if torch.cuda.is_available() else "cpu"
+# print(f"Using {device}")
 
-# cap = cv2.VideoCapture("chapters/videos/ppe-1-1.mp4")
+# cap = cv2.VideoCapture(0)
+# # cap.set(propId, value)
+# cap.set(3, 1280)
+# cap.set(4, 720)
 
-model = YOLO("../../yolo-weights/yolov8l.pt")
+cap = cv2.VideoCapture("chapters/videos/ppe-1-1.mp4")
+
+model = YOLO("../../yolo-weights/yolov8l.pt").to(device)
 
 while True:
     success, img = cap.read()
