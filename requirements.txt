@@ -20,10 +20,10 @@ cvzone==1.6.1
 ultralytics==8.3.101
 hydra-core==1.3.2
 matplotlib==3.10.1
-numpy==2.2.4
+numpy==2.1.1
 opencv-python==4.11.0.86
-pillow==11.0.0
-PyYAML==6.0.1
+pillow==11.1.0
+PyYAML==6.0.2
 requests==2.32.3
 scipy==1.15.2
 torch==2.6.0
