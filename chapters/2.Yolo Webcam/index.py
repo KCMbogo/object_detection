@@ -12,7 +12,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 cap = cv2.VideoCapture("chapters/videos/ppe-1-1.mp4")
 
-model = YOLO("../../yolo-weights/yolov8l.pt").to(device)
+model = YOLO("yolo-weights/yolov8n.pt").to(device)
 
 while True:
     success, img = cap.read()
