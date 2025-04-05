@@ -6,7 +6,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 torch.cuda.empty_cache()
 
-model = YOLO("yolo-weights/yolov8n.pt").to(device)
+model = YOLO("yolo-weights/yolov8l.pt").to(device)
 
 tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.3)
 
